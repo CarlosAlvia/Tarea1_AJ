@@ -7,6 +7,7 @@ import javax.swing.*;
 public class ventanajframe extends JFrame implements ActionListener{
 	
 	JButton btn1, btn2, btn3;
+	static String color;
     
     public ventanajframe() {
     	componentes();
@@ -45,13 +46,23 @@ public class ventanajframe extends JFrame implements ActionListener{
     	
     	if(e.getSource() == btn1) {
     		btn1.getParent().setBackground(Color.yellow);
+    		setString("Amarillo.");
     	}else if (e.getSource() == btn2) {
     		btn2.getParent().setBackground(Color.blue);
+    		setString("Azul.");
     	}else if (e.getSource() == btn3) {
     		btn3.getParent().setBackground(Color.red);
+    		setString("Rojo.");
     	}
     	
 	}
     
+    public static String getColor() {
+    	return color;
+    }
+    
+    public void setString(String palabra) {
+    	this.color = palabra;
+    }
     
 }
